@@ -9,6 +9,12 @@ const Modal = ({ isOpen, onClose, onAddElement }) => {
         setInputValue('');
     };
 
+    const handleAddElement = (e) => {
+        if (e.length <= 3) {
+            setInputValue(e)
+        }
+    }
+
     if (!isOpen) return null;
 
     return (
@@ -19,8 +25,9 @@ const Modal = ({ isOpen, onClose, onAddElement }) => {
                     <input
                         type="number"
                         value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
+                        onChange={(e) => handleAddElement(e.target.value)}
                         placeholder="Value"
+                        maxLength="3"
                     />
                     <button onClick={handleSubmit} className="add">Add</button>
                     <button onClick={onClose} className="close">Close</button>

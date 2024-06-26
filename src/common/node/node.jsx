@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../modal/modal';
 import './node.css';
 
-const Node = ({ array, isUpdating, activeIndexes, onAddElement, onRemoveElement }) => {
+const Node = ({ array, isUpdating, activeIndexes, foundIndex, removingIndex, onAddElement, onRemoveElement }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = () => {
@@ -23,7 +23,7 @@ const Node = ({ array, isUpdating, activeIndexes, onAddElement, onRemoveElement 
             <div className="array">
                 {array.map((value, index) => (
                     <div
-                        className={`element ${activeIndexes.includes(index) ? 'active' : ''}`}
+                        className={`element ${activeIndexes.includes(index) ? 'active' : ''} ${index === removingIndex ? 'removing' : ''} ${index === foundIndex ? 'found' : ''}`}
                         key={index}
                         onClick={() => isUpdating && onRemoveElement(index)}
                     >
