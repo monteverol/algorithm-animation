@@ -1,0 +1,61 @@
+.Navigation {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    background-color: rgb(30, 52, 52);
+}
+
+.Navigation .upper, .Navigation .lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.Navigation .update-array {
+    padding: 16px;
+    font-size: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Navigation .selection {
+    padding: 20px;
+    background-color: rgb(100, 227, 227);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.Navigation .selection:hover {
+    background-color: rgb(52, 160, 160);
+}
+
+.Navigation .selection.selected {
+    background-color: var(--red);
+}
+
+.Navigation .selection.selected:hover {
+    background-color: rgb(232, 43, 34);
+}
+
+.Navigation .selection.array {
+    background-color: var(--yellow);
+}
+
+.Navigation .selection.array:hover {
+    background-color: #ce9936;
+}
+
+.Navigation .selection.confirm {
+    background-color: var(--green);
+}
+
+.Navigation .selection.confirm:hover {
+    background-color: #00ac42;
+}

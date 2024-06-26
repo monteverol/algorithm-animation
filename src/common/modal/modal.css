@@ -1,0 +1,75 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.modal {
+    background: #069090;
+    padding: 40px;
+    border-radius: 8px;
+    height: auto;
+    width: 800px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+    font-size: 4em;
+    color: white;
+    margin: 0 0 1em;
+}
+
+.modal input {
+    padding: 0.5em;
+    width: 60%;
+    font-size: 3.5em;
+    height: 100px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.modal button {
+    height: 100px;
+    font-size: 3em;
+    padding: 0 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.modal button.add {
+    background-color: #00CA4E;
+}
+
+.modal button.add:hover {
+    background-color: #00ac42;
+}
+
+.modal button.close {
+    background-color: rgb(255, 49, 38);
+}
+
+.modal button.close:hover {
+    background-color: rgb(232, 43, 34);
+}
+
+.modal .bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
