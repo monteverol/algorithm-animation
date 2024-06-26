@@ -1,4 +1,8 @@
-# React + Vite
+# Algorithm Animation
+
+- Quick Sort
+- Binary Search
+- Merge Sort
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
